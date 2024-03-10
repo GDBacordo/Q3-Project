@@ -5,12 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Q3 Project</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karla">
 	<script src="https://kit.fontawesome.com/5d580f2a72.js" crossorigin="anonymous"></script>
-
 	<style>
 		body {
 			font-family:"Karla";
+			min-height:100%;
 			background-image:url(https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
 			background-attachment: fixed;
 			cursor: url("http://www.rw-designer.com/cursor-view/108553.png"), default;
@@ -18,25 +19,22 @@
 		::selection {
 			background-color:#D1899980;
 		}
-		header {
+		.navbar-custom {
 			background-color:#FFC4D1;
-			width:auto;
-			height:80px;
-			opacity:80%;
-			padding:20px;
-			font-size:150%;
-			margin-bottom:25px;
+			font-size:125%;
 		}
-		.heading {
-			display:inline-block;
-			padding-left:15px;
-		}
-		a {
+		.nav-link, a {
 			color:#450D22;
-			text-decoration:underline;
 		}
-		a:hover, i:hover {
+		a:hover, i:hover, .nav-link:hover {
 			cursor: url("http://www.rw-designer.com/cursor-view/108567.png"), default;
+			color:#450D22;
+		}
+		.gallery {
+			object-fit: cover;
+		}
+		.gallery:hover {
+			opacity:80%;
 		}
 		.info {
 			margin-left:150px;
@@ -84,120 +82,262 @@
 			text-align:center;
 			font-style:italic;
 		}
+		.container {
+			background-color:#FFC4D1;
+		}
+		.app {
+			padding-left:5px;
+		}
 		footer {
 			background-color:#FFC4D1;
 			font-size:150%;
-			padding:20px;
-			opacity:80%;
 			text-align:center;
-		}
-		footer i {
-			font-size:200%;
-			padding:10px;
-		}
-		.icons {
-			border:3px dashed #67143380;
-			padding:5px;
-			margin-left:200px;
-			margin-right:200px;
+			margin-top:auto;
 		}
 	</style>
 
 </head>
 <body>
 
-	<header>
-			<div class="row">
-				<div class="col-xl-6 bg-lightgrey">
-					<i class="fa-solid fa-bars"></i><span class="heading">Celebrities > Artists > Rappers > <a href="index.html">Doja Cat</a></span>
-				</div>
-				<div class="col-xl-6 bg-lightgrey">
-					<a href="https://www.imdb.com/name/nm9798310/bio">Learn more about Doja Cat here!</a>
-				</div>
-			</div>
-	</header>
+	<nav class="navbar navbar-expand-sm navbar-custom mb-3 py-0"> 
+		<div class="container-fluid">
+		    <a class="navbar-brand" href="#">
+			    <img src="https://merchdojacat.com/cdn/shop/files/doja_notification_logo.png?v=1695063591&width=600" class="rounded-pill" alt="Doja Cat Logo" style="width:120px">
+			</a>
+			<div class="collapse navbar-collapse" id="mynavbar">
 
-	<div class="row info">
+				<ul class="nav nav-tabs me-auto" id="myTab" role="tablist">
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Home</button>
+				  </li>
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link" id="about-tab" data-bs-toggle="tab" data-bs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false">About</button>
+				  </li>
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link" id="newsletter-tab" data-bs-toggle="tab" data-bs-target="#newsletter" type="button" role="tab" aria-controls="newsletter" aria-selected="false">Newsletter</button>
+				  </li>
+				  <li class="nav-item" role="presentation">
+				    <button class="nav-link" id="socmed-tab" data-bs-toggle="tab" data-bs-target="#socmed" type="button" role="tab" aria-controls="socmed" aria-selected="false">Social Media</button>
+				  </li>
+				</ul>
 
-		<div class="col-xl-7 bg-lightgrey">
-			<h1>Doja Cat</h1>
-			<p class="indent">Amala Ratna Zandile Dlamini, known professionally as Doja Cat, is an American rapper and singer. She was born October 21, 1995 and was raised in Los Angeles. She began making music as a teenager, uploading her songs on Soundcloud. She soon caught the attention of Kemosabe and RCA Records, with whom she signed a recording contract to start creating music.</p>
-
-			<table class="table table-bordered">
-				<tr>
-					<th colspan="3" class="table-title">Discography</th>
-				</tr>
-				<tr>
-					<th>Album Name</th>
-					<th>Year Released</th>
-					<th>Length</th>
-				</tr>
-				<tr>
-					<td>Amala</td>
-					<td>2018</td>
-					<td>45:13</td>
-				</tr>
-				<tr>
-					<td>Hot Pink</td>
-					<td>2019</td>
-					<td>39:48</td>
-				</tr>
-				<tr>
-					<td>Planet Her</td>
-					<td>2021</td>
-					<td>44:06</td>
-				</tr>
-				<tr>
-					<td>Scarlet</td>
-					<td>2023</td>
-					<td>51:45</td>
-				</tr>
-			</table>
-
-			<div class="music">
-
-					<div class="first">
-						<a href="https://open.spotify.com/album/3wOMqxNHgkga91RBC7BaZU"><img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Dojacatamala.png" class="disc rounded-circle" alt="The album cover of Doja Cat's Amala"></a>
-						<p class="subtitle">Amala</p>
-					</div>
-
-					<div class="second">
-						<a href="https://open.spotify.com/album/1MmVkhiwTH0BkNOU3nw5d3"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/Doja_Cat_-_Hot_Pink.png" class="disc rounded-circle" alt="The album cover of Doja Cat's Hot Pink"></a>
-						<p class="subtitle">Hot Pink</p>
-					</div>
-
-					<div class="third">
-						<a href="https://open.spotify.com/album/1nAQbHeOWTfQzbOoFrvndW"><img src="https://upload.wikimedia.org/wikipedia/en/6/61/Doja_Cat_-_Planet_Her.png?20210706050924" class="disc rounded-circle" alt="The album cover of Doja Cat's Planet Her"></a>
-						<p class="subtitle">Planet Her</p>
-					</div>
-				
-					<div class="fourth">
-						<a href="https://open.spotify.com/album/6DmPNcfpkXBVRJsEIJY9tl"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Doja_Cat_-_Scarlet.png/220px-Doja_Cat_-_Scarlet.png" class="disc rounded-circle" alt="The album cover of Doja Cat's Scarlet"></a>
-						<p class="subtitle">Scarlet</p>
-					</div>
+				<form class="d-flex ms-auto">
+					<input class="form-control me-2" type="text" placeholder="Search">
+					<button class="btn btn-danger" type="button">Search</button>
+				</form>
 
 			</div>
 		</div>
+	</nav>
 
-		<div class="col-xl-5 bg-lightgrey">
-			<img src="https://media.wonderlandmagazine.com/uploads/2020/05/A98I8806.jpg" id="profile" alt="Doja Cat wearing pink cat ears against a pink background">
+	<div class="tab-content">
+
+		<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+			<h1 class="text-center mb-3">Doja Cat</h1>
+
+			<div class="row g-2 m-3">
+				<div class="col-xl-4">
+					<img src="https://i.pinimg.com/736x/a8/cf/ae/a8cfae8702f84a70b6c7a265803b9fc7.jpg" alt="Doja Cat in a pink wig" class="img-thumbnail h-100 gallery">
+				</div>
+
+				<div class="col-xl-4">
+					<img src="https://i.pinimg.com/736x/5e/b0/d9/5eb0d9b15cfabb2a7c52a15bd91a5af0.jpg" alt="Doja Cat in a fairy outfit" class="img-thumbnail h-100 gallery">
+				</div>
+
+				<div class="col-xl-4">
+					<img src="https://i.pinimg.com/564x/03/a5/86/03a58683c6162a91dd259fca955492e1.jpg" alt="Doja Cat in her music video for Agora Hills" class="img-thumbnail h-100 gallery">
+				</div>
+				<div class="col-xl-4">
+					<img src="https://i.pinimg.com/564x/82/22/e1/8222e146c1e1f5405a62d0aabea84a59.jpg" alt="Doja Cat in a pink fur-lined hoodie" class="img-thumbnail h-100 gallery">
+				</div>
+
+				<div class="col-xl-4">
+					<img src="https://i.pinimg.com/564x/51/6e/c2/516ec209de83b01c1c2c1f767e0fb087.jpg" alt="Doja Cat in her music video for Kiss Me More" class="img-thumbnail h-100 gallery">
+				</div>
+
+				<div class="col-xl-4">
+					<img src="https://i.pinimg.com/564x/76/c4/2e/76c42e69a4dbf28c356baf16787996f2.jpg" alt="Doja Cat with buns" class="img-thumbnail gallery">
+				</div>
+			</div>
+	  	
 		</div>
 
+		<div class="tab-pane" id="about" role="tabpanel" aria-labelledby="about-tab">
+
+			<div class="row info">
+				<div class="col-xl-7 bg-lightgrey">
+					<h2>Doja Cat</h2>
+					<p class="indent">Amala Ratna Zandile Dlamini, known professionally as Doja Cat, is an American rapper and singer. She was born October 21, 1995 and was raised in Los Angeles. She began making music as a teenager, uploading her songs on Soundcloud. She soon caught the attention of Kemosabe and RCA Records, with whom she signed a recording contract to start creating music.</p>
+
+					<table class="table table-bordered">
+						<tr>
+							<th colspan="3" class="table-title">Discography</th>
+						</tr>
+						<tr>
+							<th>Album Name</th>
+							<th>Year Released</th>
+							<th>Length</th>
+						</tr>
+						<tr>
+							<td>Amala</td>
+							<td>2018</td>
+							<td>45:13</td>
+						</tr>
+						<tr>
+							<td>Hot Pink</td>
+							<td>2019</td>
+							<td>39:48</td>
+						</tr>
+						<tr>
+							<td>Planet Her</td>
+							<td>2021</td>
+							<td>44:06</td>
+						</tr>
+						<tr>
+							<td>Scarlet</td>
+							<td>2023</td>
+							<td>51:45</td>
+						</tr>
+					</table>
+
+					<div class="music">
+
+						<div class="first">
+							<a href="https://open.spotify.com/album/3wOMqxNHgkga91RBC7BaZU"><img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Dojacatamala.png" class="disc rounded-circle" alt="The album cover of Doja Cat's Amala"></a>
+							<p class="subtitle">Amala</p>
+						</div>
+
+						<div class="second">
+							<a href="https://open.spotify.com/album/1MmVkhiwTH0BkNOU3nw5d3"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/Doja_Cat_-_Hot_Pink.png" class="disc rounded-circle" alt="The album cover of Doja Cat's Hot Pink"></a>
+							<p class="subtitle">Hot Pink</p>
+						</div>
+
+						<div class="third">
+							<a href="https://open.spotify.com/album/1nAQbHeOWTfQzbOoFrvndW"><img src="https://upload.wikimedia.org/wikipedia/en/6/61/Doja_Cat_-_Planet_Her.png?20210706050924" class="disc rounded-circle" alt="The album cover of Doja Cat's Planet Her"></a>
+							<p class="subtitle">Planet Her</p>
+						</div>
+					
+						<div class="fourth">
+							<a href="https://open.spotify.com/album/6DmPNcfpkXBVRJsEIJY9tl"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/0b/Doja_Cat_-_Scarlet.png/220px-Doja_Cat_-_Scarlet.png" class="disc rounded-circle" alt="The album cover of Doja Cat's Scarlet"></a>
+							<p class="subtitle">Scarlet</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-xl-5 bg-lightgrey">
+					<img src="https://media.wonderlandmagazine.com/uploads/2020/05/A98I8806.jpg" id="profile" alt="Doja Cat wearing pink cat ears against a pink background">
+				</div>
+			</div>
+		</div>
+
+		<div class="tab-pane" id="newsletter" role="tabpanel" aria-labelledby="newsletter-tab">
+		  	<div class="container p-3 mt-3 mb-3">
+				<form>
+				    <h2>Doja Cat Newsletter</h2>
+						<div class="row align-items-center g-2 mb-2">
+						      <div class="username col-auto">
+						        <input type="text" id="username" placeholder="Username" class="form-control">
+						      </div>
+						      <div class="email col-auto">
+						        <input type="email" id="email" placeholder="Email" class="form-control">
+						      </div>
+						</div>
+						<div class="row align-items-center g-2 mb-3">
+							<div class="password col-auto">
+								<input type="password" id="password" placeholder="Password" class="form-control">
+						    </div>
+						    <div class="confirmPassword col-auto">
+						        <input type="password" id="confirmPassword" placeholder="Confirm password" class="form-control">
+						   </div>
+						</div>
+						<div class="form-group mb-3" role="group">
+							<p id="newsletter-head">I want to receive:</p>
+							<label>
+								<input type="checkbox" name="newsletter" value="weekly"> The weekly newsletter
+							</label>
+							<label>
+								<input type="checkbox" name="newsletter" value="company_offers"> Tour ticket sales
+							  </label>
+							  <label>
+							  	<input type="checkbox" name="newsletter" value="associated_offers">
+							  	New song releases
+							  </label>
+						</div>
+						<div class="mb-3">
+							<input type="checkbox" id="terms">
+							<label for="terms">I agree to the terms and conditions</label>
+						</div>
+
+						<button type="submit" class="btn btn-danger btn-lg mb-3" id="buttonAlert">Subscribe</button>
+
+						<div class="alert alert-danger alert-dismissible fade show" role="alert">
+							<strong>Thank you for subscribing!</strong> 
+							<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+						</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="tab-pane" id="socmed" role="tabpanel" aria-labelledby="socmed-tab">
+			<div class="container p-3 mb-3">
+				<h2>Doja Cat's Social Media</h2>
+
+				<div class="container">
+					<div class="row g-2">
+						<div class="col-6">
+							<a href="https://www.tiktok.com/@dojacat" target="_blank" class="btn p-3 btn-outline-danger btn-lg w-100">
+								<i class="fa-brands fa-tiktok"></i><span class="app">Tiktok</span>
+							</a>
+						</div>
+						<div class="col-6">
+							<a href="https://open.spotify.com/artist/5cj0lLjcoR7YOSnhnX0Po5" target="_blank" class="btn p-3 btn-outline-danger btn-lg w-100">
+								<i class="fa-brands fa-spotify"></i><span class="app">Spotify</span>
+							</a>
+						</div>
+						<div class="col-6">
+							<a href="https://soundcloud.com/amalaofficial" target="_blank" class="btn p-3 btn-outline-danger btn-lg w-100">
+								<i class="fa-brands fa-soundcloud"></i><span class="app">Soundcloud</span>
+							</a>
+						</div>
+						<div class="col-6">
+							<a href="https://music.apple.com/us/artist/doja-cat/830588310" target="_blank" class="btn p-3 btn-outline-danger btn-lg w-100">
+								<i class="fa-solid fa-music"></i><span class="app">Apple Music</span>
+							</a>
+						</div>
+						<div class="col-6">
+							<a href="https://www.youtube.com/channel/UCzpl23pGTHVYqvKsgY0A-_w" target="_blank" class="btn p-3 btn-outline-danger btn-lg w-100">
+								<i class="fa-brands fa-youtube"></i><span class="app">YouTube</span>
+							</a>
+						</div>
+						<div class="col-6">
+							<a href="https://twitter.com/dojacat" target="_blank" class="btn p-3 btn-outline-danger btn-lg w-100">
+								<i class="fa-brands fa-x-twitter"></i><span class="app">Twitter</span>
+							</a>
+						</div>
+						<div class="col-6">
+							<a href="https://www.instagram.com/dojacat/?hl=en" target="_blank" class="btn p-3 btn-outline-danger btn-lg w-100">
+								<i class="fa-brands fa-instagram"></i><span class="app">Instagram</span>
+							</a>
+						</div>
+						<div class="col-6">
+							<a href="https://www.facebook.com/DojaCat" target="_blank" class="btn p-3 btn-outline-danger btn-lg w-100">
+								<i class="fa-brands fa-facebook"></i><span class="app">Facebook</span>
+							</a>
+						</div>
+						<div class="col-12">
+							<a href="https://www.dojacat.com" target="_blank" class="btn p-3 btn-outline-danger btn-lg w-100">
+								<i class="fa-solid fa-cat"></i><span class="app">Doja Cat's Website</span>
+							</a>
+						</div>
+					</div>
+				</div>
+		</div>
+	  	
+	</div>
 	</div>
 
-	<footer>
-		<p>Find <strong>DOJA CAT</strong> here:</p>
-		<div class="icons">
-			<a href="https://www.dojacat.com/"><i class="fa-solid fa-cat"></i></a>
-			<a href="https://open.spotify.com/artist/5cj0lLjcoR7YOSnhnX0Po5"><i class="fa-brands fa-spotify"></i></a>
-			<a href="https://soundcloud.com/amalaofficial"><i class="fa-brands fa-soundcloud"></i></a>
-			<a href="https://music.apple.com/us/artist/doja-cat/830588310"><i class="fa-solid fa-music"></i></a>
-			<a href="https://www.youtube.com/channel/UCzpl23pGTHVYqvKsgY0A-_w"><i class="fa-brands fa-youtube"></i></a>
-			<a href="https://twitter.com/dojacat"><i class="fa-brands fa-x-twitter"></i></a>
-			<a href="https://www.instagram.com/dojacat/?hl=en"><i class="fa-brands fa-instagram"></i></a>
-			<a href="https://www.facebook.com/DojaCat"><i class="fa-brands fa-facebook"></i></a>
-			<a href="https://www.tiktok.com/@dojacat"><i class="fa-brands fa-tiktok"></i></a>
-		</div>
+	<footer class="p-4">
+			<p>Read more about Doja Cat <a href="https://www.imdb.com/name/nm9798310/bio/">here!</a></p>
 	</footer>
 
 </body>
