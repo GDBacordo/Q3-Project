@@ -11,7 +11,6 @@
 	<style>
 		body {
 			font-family:"Karla";
-			min-height:100%;
 			background-image:url(https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
 			background-attachment: fixed;
 			cursor: url("http://www.rw-designer.com/cursor-view/108553.png"), default;
@@ -28,10 +27,12 @@
 		}
 		a:hover, i:hover, .nav-link:hover {
 			cursor: url("http://www.rw-designer.com/cursor-view/108567.png"), default;
-			color:#450D22;
+			color:#821d43;
 		}
 		.gallery {
 			object-fit: cover;
+			width:500px;
+			height:500px;
 		}
 		.gallery:hover {
 			opacity:80%;
@@ -133,26 +134,26 @@
 	<div class="tab-content">
 
 		<div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
-			<h1 class="text-center mb-3">Doja Cat</h1>
+			<h1 class="text-center mt-4">Doja Cat</h1>
 
 			<div class="row g-2 m-3">
 				<div class="col-xl-4">
-					<img src="https://i.pinimg.com/736x/a8/cf/ae/a8cfae8702f84a70b6c7a265803b9fc7.jpg" alt="Doja Cat in a pink wig" class="img-thumbnail h-100 gallery">
+					<img src="https://i.pinimg.com/736x/a8/cf/ae/a8cfae8702f84a70b6c7a265803b9fc7.jpg" alt="Doja Cat in a pink wig" class="img-thumbnail gallery">
 				</div>
 
 				<div class="col-xl-4">
-					<img src="https://i.pinimg.com/736x/5e/b0/d9/5eb0d9b15cfabb2a7c52a15bd91a5af0.jpg" alt="Doja Cat in a fairy outfit" class="img-thumbnail h-100 gallery">
+					<img src="https://64.media.tumblr.com/94350563a49fe74670ac0bad5da4c9bb/56aeeae8588d80fe-e3/s1280x1920/695e08b0c7b6f9c28143522b1f26ec37ba9260e4.jpg" alt="Doja Cat in her music video for Kiss Me More" class="img-thumbnail gallery">
 				</div>
 
 				<div class="col-xl-4">
-					<img src="https://i.pinimg.com/564x/03/a5/86/03a58683c6162a91dd259fca955492e1.jpg" alt="Doja Cat in her music video for Agora Hills" class="img-thumbnail h-100 gallery">
+					<img src="https://e.snmc.io/i/1200/s/028b73b67d348171aacdbe002d998bbc/7570564" alt="Doja Cat singing" class="img-thumbnail gallery">
 				</div>
 				<div class="col-xl-4">
-					<img src="https://i.pinimg.com/564x/82/22/e1/8222e146c1e1f5405a62d0aabea84a59.jpg" alt="Doja Cat in a pink fur-lined hoodie" class="img-thumbnail h-100 gallery">
+					<img src="https://www.billboard.com/wp-content/uploads/media/01-doja-cat-press-photo-2018-billboard-1548.jpg" alt="Doja Cat with a pink background" class="img-thumbnail gallery">
 				</div>
 
 				<div class="col-xl-4">
-					<img src="https://i.pinimg.com/564x/51/6e/c2/516ec209de83b01c1c2c1f767e0fb087.jpg" alt="Doja Cat in her music video for Kiss Me More" class="img-thumbnail h-100 gallery">
+					<img src="https://i.pinimg.com/564x/51/6e/c2/516ec209de83b01c1c2c1f767e0fb087.jpg" alt="Doja Cat in her music video for Kiss Me More" class="img-thumbnail gallery">
 				</div>
 
 				<div class="col-xl-4">
@@ -231,7 +232,7 @@
 		</div>
 
 		<div class="tab-pane" id="newsletter" role="tabpanel" aria-labelledby="newsletter-tab">
-		  	<div class="container p-3 mt-3 mb-3">
+		  	<div class="container p-3 mt-5 mb-5">
 				<form>
 				    <h2>Doja Cat Newsletter</h2>
 						<div class="row align-items-center g-2 mb-2">
@@ -279,7 +280,7 @@
 		</div>
 
 		<div class="tab-pane" id="socmed" role="tabpanel" aria-labelledby="socmed-tab">
-			<div class="container p-3 mb-3">
+			<div class="container p-3 mt-5 mb-5">
 				<h2>Doja Cat's Social Media</h2>
 
 				<div class="container">
@@ -332,12 +333,13 @@
 					</div>
 				</div>
 		</div>
-	  	
+	
 	</div>
 	</div>
 
-	<footer class="p-4">
-			<p>Read more about Doja Cat <a href="https://www.imdb.com/name/nm9798310/bio/">here!</a></p>
+	<footer class="p-4 mt-5">
+			<p class="m-0">Read more about Doja Cat <a href="https://www.imdb.com/name/nm9798310/bio/">here!</a></p>
+			<small><span id="copy_ele">&#169;</span>2024 All rights reserved.</small>
 	</footer>
 
 </body>
